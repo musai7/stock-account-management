@@ -42,6 +42,8 @@ public class StockPortfolio {
 	
 	public static void main(String[] args) throws IOException {
 		StockPortfolio portfolio = new StockPortfolio();
+		Account account = new Account();
 		portfolio.readFileInput();
+		account.withdraw(5000);
 	}
 }
