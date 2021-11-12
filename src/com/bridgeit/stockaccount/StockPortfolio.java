@@ -1,6 +1,8 @@
 package com.bridgeit.stockaccount;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -37,13 +39,18 @@ public class StockPortfolio {
 	}
 	
 	void totalStockValue() {
-		
+	
 	}
 	
 	public static void main(String[] args) throws IOException {
 		StockPortfolio portfolio = new StockPortfolio();
-		Account account = new Account();
 		portfolio.readFileInput();
-		account.withdraw(5000);
+		StockAccount stockAccount = new StockAccountImpl();
+		stockAccount.stockAccount("C:\\Users\\musai\\rfp-java\\practice\\shankar rpf-80\\stock-account-management\\stockAccount");
+		double value =stockAccount.valueOf();
+		System.out.println("buying cost "+value);
+		stockAccount.buy(value, 100);
+		stockAccount.sell(value, 100);
+		
 	}
 }

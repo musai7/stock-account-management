@@ -3,6 +3,7 @@ package com.bridgeit.stockaccount;
 import java.util.Scanner;
 
 public class Stock {
+	
 	private String stockName;
 	private int numberOfStocks;
 	private double stockPrice;
